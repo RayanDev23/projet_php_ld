@@ -17,8 +17,11 @@ Description brève de votre projet.
 
 ## Configuration
 
-1. Configurez le fichier `config.php` avec les détails de votre base de données, etc.
 
+
+1. Configurez le fichier `config.php` avec les détails de votre base de données, 
+
+2. Intégrer le fichier `projet_php.sql` dans la la base de données pour avoir la bonne config
 
 ## Structure du Projet
 
