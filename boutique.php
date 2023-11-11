@@ -27,7 +27,6 @@ $categoryFilter = isset($_POST['categorie']) ? $_POST['categorie'] : 'toutes';
                             <label for="categorie" class="form-label">Catégorie</label>
                             <select class="form-select" id="categorie" name="categorie">
                                 <option value="toutes">Toutes les catégories</option>
-                                <!-- Vous pouvez générer les options à partir de votre base de données ici -->
                                 <?php
                                 try {
                                     $pdo = getConnection();
