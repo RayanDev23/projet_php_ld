@@ -50,7 +50,10 @@ require_once './functions/db.php';
                         <p><?php echo $productDescription; ?></p>
                         <p>Prix : <?php echo $productPrice; ?> €</p>
                         <p>En stock : <?php echo $productStock; ?> unités</p>
-                        <!-- Ajoutez ici un bouton pour ajouter le produit au panier ou effectuer une autre action. -->
+                        <form action="add_to_cart.php" method="post">
+                        <input type="hidden" name="product_id" value="<?php echo $productId; ?>">
+                          <button type="submit" class="btn btn-primary">Ajouter au panier</button>
+                        </form>
                       </div>
                     </div>
                   </div>

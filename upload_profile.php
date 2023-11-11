@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once 'functions/db.php';
+require_once './classes/Utils.php';
 
 if (!isset($_SESSION['user_email'])) {
     header("Location: login.php");
@@ -32,7 +33,7 @@ if (isset($_FILES['profileImage']) && $_FILES['profileImage']['error'] === UPLOA
         $stmt->execute(['profil_image' => $uploadPath, 'email' => $userEmail]);
 
         // Redirigez l'utilisateur vers le tableau de bord
-        header("Location: dashbord.php");
+        Utils::redirect('dashbord.php');
         exit;
     } else {
         echo "Une erreur s'est produite lors du téléchargement de la photo de profil.";

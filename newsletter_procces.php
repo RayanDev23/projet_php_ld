@@ -1,4 +1,5 @@
 <?php
+require_once './classes/Utils.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
@@ -14,6 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 } else {
     //Je redirige vers la page à propos si la demande n'est pas de type POST
-    header("Location: a_propos.php");
+    Utils::redirect('à_propos.php');
     exit;
 }
